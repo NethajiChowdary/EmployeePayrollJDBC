@@ -20,18 +20,23 @@ public class EmployeePayrollJdbc
 			e.printStackTrace();
 		}
 		ListDrivers();
-		try {
+		try
+		{
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306//payroll_service?useSSL=false"
 				, "root", "Nethaji@123");
-		} catch (SQLException e) {
+		}
+		catch (SQLException e)
+		{
 			e.printStackTrace();
 		}
 		System.out.println("Connection Done..!!!");
 	}
 
-	private static void ListDrivers() {
+	private static void ListDrivers() 
+	{
 		Enumeration<Driver> driverList=DriverManager.getDrivers();
-		while(driverList.hasMoreElements()) {
+		while(driverList.hasMoreElements()) 
+		{
 			Driver driverClass=(Driver)driverList.nextElement();
 			System.out.println("  "+driverClass.getClass().getName());
 		}
